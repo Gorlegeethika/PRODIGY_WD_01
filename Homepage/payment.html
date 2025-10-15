@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+ body{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 20px;
+        background-color: ghostwhite;
+        font-style: italic;
+        font-size: larger;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        fieldset {
+            width: 75%;
+            margin-bottom: 80px;
+            border-radius: 20px;
+            border-color: black;
+            background-color: lavender;
+        }
+        .contact, .payment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .payment p {
+            text-align: center;
+        }
+        .contact #button,
+        .payment #button {
+            margin: 10px auto;
+            display: block;
+            color: black;
+            background-color: #299a5c;
+            cursor: pointer;
+        }
+    </style>
+        
+
+</head>
+<body>
+    <fieldset>
+        <div class="payment">
+            <a href="homepage.html" style="display:flex;justify-content: center;align-items: center; font-weight: 900;font-size:xx-large;">Home</a>
+            <h1>Payment Form</h1>
+            <p>Cardholder's Name: <input type="text" id="name" placeholder="gorlesrinivasa rao"></p>
+            <p>Payment Type: 
+                <select>
+                    <option>Credit Card</option>
+                    <option>Debit Card</option>
+                    <option>UPI</option>
+                </select>
+            </p>
+            <p>Card Number: <input type="number" id="number" placeholder="1234 5678 1234 4567"></p>
+            <p>Expiration Date: <input type="date" id="date"></p>
+            <p>CVV: <input type="number" id="CVV" placeholder="236"></p>
+            <p>Payment Amount: <input type="number"></p>
+            <input type="button" value="Submit" id="button" onclick="showMessage()">
+        </div>
+        
+    </fieldset>
+    
+    <script>
+        function showMessage() {
+            alert('Payment has been submitted successfully!');
+        }
+    </script>
+</body>
+</html>

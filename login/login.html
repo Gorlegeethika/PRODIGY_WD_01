@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form" onsubmit="login(event)">
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="remember-me">Remember Me:</label>
+                <input type="checkbox" id="remember-me" name="remember-me">
+            </div>
+            <button type="submit">Login</button>
+            <button type="button" onclick="switchToRegister()">Register</button>
+        </form>
+
+        <!-- Register form (initially hidden) -->
+        <form id="register-form" style="display: none;" onsubmit="register(event)">
+            <h2>Register</h2>
+            <div class="input-group">
+                <label for="username-reg">Username:</label>
+                <input type="text" id="username-reg" name="username-reg" required>
+            </div>
+            <div class="input-group">
+                <label for="password-reg">Password:</label>
+                <input type="password" id="password-reg" name="password-reg" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit">Register</button>
+            <button type="button" onclick="switchToLogin()">Back to Login</button>
+        </form>
+    </div>
+
+    <script>
+        function switchToRegister() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        }
+
+        function switchToLogin() {
+            document.getElementById('register-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        }
+
+        function login(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const username = document.getElementById('username').value;
+            localStorage.setItem('username', username);
+
+            // Redirect to homepage on login
+            window.location.href = "../HomePage/index.html"
+        }
+
+        function register(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const usernameReg = document.getElementById('username-reg').value;
+            const passwordReg = document.getElementById('password-reg').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (passwordReg === confirmPassword) {
+                // Add registration logic here
+                alert('Registration successful');
+                localStorage.setItem('username', usernameReg); // Store the username in localStorage
+                switchToLogin();
+            } else {
+                alert('Passwords do not match');
+            }
+        }
+    </script>
+</body>
+</html>

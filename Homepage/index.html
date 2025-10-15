@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental hub</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="nav-logo border">
+                <div class="logo" style="background-image: url('home_logo.jpg');"></div>
+            </div>
+            <form id="search-form" onsubmit="searchRentals(event)">
+                <div class="search-bar">
+                    <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <input type="search" placeholder="Search for Rentals" class="search">
+                    <div class="search-btn"><input type="button" value="search"></div>
+                </div>
+            </form>
+            <div class="ankers">
+                <a href="../Homepage/index.html" style="color:white;text-decoration: none;">Home</a>
+                <a href="../listings/listings.html" style="color:white;text-decoration: none;">Listings</a>
+                <a href="../contact/contact.html" style="color:white;text-decoration: none;">Contact</a>
+                <a href="../login/login.html" style="color:white;text-decoration: none;">Login/Register</a>
+            </div>
+            <div class="profile">
+                <a href="../profile/profile.html">
+                    <i class="fa-solid fa-user" style="color:aliceblue;font-size: large;cursor:pointer"></i>
+                </a>
+                <div id="profile-name" style="color: aliceblue; font-size: medium; margin-top: 5px;"></div>
+            </div>
+        </div>
+        <div class="heading"><h2>Welcome To RentalHub</h2></div>
+        <div class="head-bg">
+            <div class="message1">
+                <h3>Find your perfect home</h3>
+                <p>Browse thousands of rental listings with ease</p>
+            </div>
+            <div class="hero-message">
+                <p>Key To Your Dream Home. <a href="https://www.google.com" target="_blank">Click here to Explore.</a></p>
+            </div>
+        </div>
+    </header>
+
+    <div class="home-head"><h2>Homes</h2></div>
+    <div class="shop-section">
+        <div class="box1 box">
+            <h2>The Hub</h2>
+            <a href="box_1.html">
+                <div class="box-image" style="background-image: url('box_1.jpg');"></div>
+            </a>
+            <p>See more</p>
+        </div>
+        <div class="box2 box">
+            <h2>Big Beautiful House</h2>
+            <a href="box_2.html">
+                <div class="box-image" style="background-image: url('box_2.jpg');"></div>
+            </a>
+            <p>See more</p>
+        </div>
+        <div class="box3 box">
+            <h2>New Mill House</h2>
+            <a href="box_3.html">
+                <div class="box-image" style="background-image: url('box_3.jpeg');"></div>
+            </a>
+            <p>See more</p>
+        </div>
+        <div class="box4 box">
+            <h2>Elm House</h2>
+            <a href="box_4.html">
+                <div class="box-image" style="background-image: url('box_4.jpg');"></div>
+            </a>
+            <p>See more</p>
+        </div>
+        <div class="home-head"><h2>Apartments</h2></div>
+        <div class="box5 box">
+            <h2>Pulse Apartments</h2>
+            <a href="box_5.html">
+                <div class="box-image" style="background-image: url('box_5.jpg');"></div>
+            </a>
+            <p>See more</p>
+        </div>
+        <div class="box6 box">
+            <h2>Zenith Residences</h2>
+            <a href="box_6.html">
+                <div class="box-image" style="background-image: url('box_6.webp');"></div>
+            </a>
+            <p>See more</p>
+        </div>
+        <div class="box7 box">
+            <h2>Royal Apartment</h2>
+            <a href="box_7.html">
+                <div class="box-image" style="background-image: url('box_7.jpg');"></div>
+            </a>
+            <p>See more</p>
+        </div>
+        <div class="box8 box">
+            <h2>Bloom Apartments</h2>
+            <a href="box_8.html">
+                <div class="box-image" style="background-image: url('box_8.jpg');"></div>
+            </a>
+            <p>See more</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot-panel1">Back to Top</div>
+        <div class="foot-panel2">
+            <ul>
+                <p>Get To Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Rentalhub</a>
+                <a>Investor Relations</a>
+                <a>Rental Devices</a>
+                <a>Rental Science</a>
+            </ul>
+            <!-- Repeat other panels as needed -->
+        </div>
+        <div class="foot-panel3"><div class="logo"></div></div>
+        <div class="foot-panel4">
+            <div class="pages">
+                <a>Conditions of Use</a>
+                <a>Privacy Notice</a>
+                <a>Your Ads Privacy Choices</a>
+            </div>
+            <div class="copy-right">
+                © 1996-2024, RentalHub.com, Inc. or its affiliates
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
